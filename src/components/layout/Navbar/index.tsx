@@ -28,7 +28,6 @@ const Navbar = () => {
     <header className="absolute inset-x-0 top-0 z-50 w-full px-4 py-4 md:px-8 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <nav className="flex items-center justify-between rounded-full border-2 border-white/10 bg-black/20 px-8 py-5 backdrop-blur-sm">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="relative h-8 w-8">
               <Image src={logo} alt="Logo" fill className="object-contain" />
@@ -55,13 +54,10 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        {/* Mobile Overlay */}
         <div
           className={cn(
             "fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/95 transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 visible"
-              : "opacity-0 invisible"
+            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           )}
         >
           <Button
