@@ -1,3 +1,4 @@
+import Provider from "@/provider";
 import type { Metadata } from "next";
 import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rethinkSans.variable}  antialiased`}>{children}</body>
+      <body className={`${rethinkSans.variable}  antialiased`}>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }
